@@ -12,7 +12,8 @@ class OCUserProfileController extends ezpRestMvcController
         //$result->variables['fields'] = ezpRestContentModel::getFieldsByContent( $content );
         
         $objectMetadata = ezpRestContentModel::getMetadataByContent( $content );
-        $result->variables['externalId'] = md5( $objectMetadata['objectRemoteId'] );
+        //$result->variables['externalId'] = md5( $objectMetadata['objectRemoteId'] );
+        $result->variables['externalId'] = $objectMetadata['objectRemoteId'];
         $result->variables['userName'] = $objectMetadata['objectName'];        
         
         //$result->variables['metadata'] = $objectMetadata;
